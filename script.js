@@ -107,10 +107,10 @@ const properties = {
     { city: "Dallas",  image: "p5.jpg", area: "300 m²", bedroom: "1 Bedroom",  price: "$900 / mo"   },
     { city: "Seattle", image: "p6.jpg", area: "350 m²", bedroom: "2 Bedrooms", price: "$1,500 / mo" },
   ],
-  sell: [
-    { city: "Miami",   image: "p6.jpg", area: "700 m²", bedroom: "5 Bedrooms", price: "$890,000" },
-    { city: "Boston",  image: "p7.jpg", area: "550 m²", bedroom: "3 Bedrooms", price: "$430,000" },
-    { city: "Houston", image: "p4.jpg", area: "600 m²", bedroom: "4 Bedrooms", price: "$360,000" },
+   sell: [
+    { city: "Chicago", image: "p6.jpg", area: "250 m²", bedroom: "2 Bedrooms", price: "$1,200 / mo" },
+    { city: "Dallas",  image: "p4.jpg", area: "300 m²", bedroom: "1 Bedroom",  price: "$900 / mo"   },
+    { city: "Seattle", image: "p5.jpg", area: "350 m²", bedroom: "2 Bedrooms", price: "$1,500 / mo" },
   ]
 };
 
