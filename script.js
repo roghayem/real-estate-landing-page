@@ -110,7 +110,7 @@ const properties = {
   sell: [
     { city: "Miami",   image: "p6.jpg", area: "700 m²", bedroom: "5 Bedrooms", price: "$890,000" },
     { city: "Boston",  image: "p7.jpg", area: "550 m²", bedroom: "3 Bedrooms", price: "$430,000" },
-    { city: "Houston", image: "p5.jpg", area: "600 m²", bedroom: "4 Bedrooms", price: "$360,000" },
+    { city: "Houston", image: "p4.jpg", area: "600 m²", bedroom: "4 Bedrooms", price: "$360,000" },
   ]
 };
 
