@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nestora | Real Estate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header-modern">
+    <div class="nav-container">
+      <div class="logo-area">
+        <h2>Nestora</h2>
+      </div>
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right" id="navRight">
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#featured">Featured</a>
+          <a href="#about">About</a>
+          <a href="#properties">Properties</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="btn-contact" id="contactBtn">Contact Us</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="container" id="home">
+    <div class="hero-section">
+      <div class="hero-text">
+        <h2 class="hero-title">Find Your Dream Home Today</h2>
+        <p class="hero-subtitle">Discover premium properties for sale and rent in the best locations. Find modern homes, luxury apartments, and great investment opportunities all in one place.</p>
+        <button class="primary" onclick="document.getElementById('properties').scrollIntoView({behavior:'smooth'})">Explore Properties</button>
+        <button class="secondery" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Agent</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED -->
+  <section class="featured" id="featured">
+    <div class="title-featured reveal">
+      <div class="right-part">
+        <h2>Discover Your Perfect<span> Property Match</span></h2>
+      </div>
+      <div class="left-part">
+        <p>Discover your perfect property match with confidence. We connect buyers, sellers, and investors with exceptional real estate opportunities tailored to their unique needs. From luxury homes to investment properties, our expert team is dedicated to helping you find the right place to call home.</p>
+      </div>
+    </div>
+    <div class="gallery reveal">
+      <div class="left-image">
+        <img src="p5.jpg" alt="Property">
+      </div>
+      <div class="right-image">
+        <img src="p1.jpg" alt="Property">
+        <img src="p3.jpg" alt="Property">
+        <img src="p4.jpg" alt="Property">
+        <img src="p7.jpg" alt="Property">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="about-container reveal" id="about">
+      <div class="about-image">
+        <img src="p7.jpg" alt="About us">
+      </div>
+      <div class="about-card">
+        <div class="about-eyebrow"><div class="about-eyebrow-line"></div><span>About Us</span></div>
+        <h2>Helping you <br>find the <em>right</em><br>property</h2>
+        <p>Finding the right property should be simple and stress-free. We connect buyers, renters, and investors with carefully selected properties that match their needs and goals.</p>
+        <p>Our mission is to provide a seamless real estate experience through trusted guidance, quality listings and personalized support every step of the way.</p>
+        <a href="#properties"><button class="about-cta">View Properties <i class="fas fa-arrow-right" style="font-size:11px"></i></button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTIES SLIDER -->
+  <section class="properties" id="properties">
+    <div class="reveal">
+      <h2 class="properties-title">Property Showcase</h2>
+      <p class="properties-subtitle">Browse our curated selection of premium listings</p>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="buy">Buy</button>
+        <button class="tab-btn" data-tab="rent">Rent</button>
+        <button class="tab-btn" data-tab="sell">Sell</button>
+      </div>
+      <div class="cosmic-search">
+        <input type="text" id="searchInput" placeholder="Search by city, size, price…">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+
+    <div class="slider-track-wrap reveal">
+      <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="slider-viewport">
+        <div class="cards-wrapper" id="cardsContainer"></div>
+      </div>
+      <button class="slider-arrow next" id="nextBtn" aria-label="Next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner reveal">
+      <div class="contact-text">
+        <div class="about-eyebrow"><div class="about-eyebrow-line" style="background:#c8a76a"></div><span style="color:#906528">Get In Touch</span></div>
+        <h2>Ready to find your<br><em>perfect property?</em></h2>
+        <p>Our agents are here to guide you every step of the way. Fill out the form and we'll get back to you within 24 hours.</p>
+        <div class="contact-info">
+          <div class="contact-info-item"><i class="fas fa-phone"></i><span>+1 (555) 123-4567</span></div>
+          <div class="contact-info-item"><i class="fas fa-envelope"></i><span>hello@nestora.com</span></div>
+          <div class="contact-info-item"><i class="fas fa-map-marker-alt"></i><span>123 Main St, New York, NY</span></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+1 (555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about the property you're looking for…" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="form-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+        <div class="form-success" id="formSuccess">✓ Message sent! We'll be in touch soon.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Nestora</h3>
+        <p>Your trusted partner in finding the perfect property. Premium listings, expert agents, seamless experience.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#featured">Featured</a>
+        <a href="#about">About Us</a>
+        <a href="#properties">Properties</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Property Types</h4>
+        <a href="#">Apartments</a>
+        <a href="#">Villas</a>
+        <a href="#">Commercial</a>
+        <a href="#">Land</a>
+        <a href="#">New Builds</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:+15551234567"><i class="fas fa-phone" style="margin-right:8px;font-size:12px"></i>+1 (555) 123-4567</a>
+        <a href="mailto:hello@nestora.com"><i class="fas fa-envelope" style="margin-right:8px;font-size:12px"></i>hello@nestora.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt" style="margin-right:8px;font-size:12px"></i>New York, NY</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Nestora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
